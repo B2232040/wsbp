@@ -1,6 +1,7 @@
 package com.example.wsbp.service;
 
 import com.example.wsbp.data.AuthUser;
+import com.example.wsbp.data.Subject;
 
 import java.util.List;
 
@@ -24,5 +25,12 @@ public interface IUserService {
      * @return AuthUser型のListインスタンス
      */
     public List<AuthUser> findAuthUsers();
+
+    /**
+     * IDと科目名の一覧を、Subject型のリストで検索する
+     *
+     * @return Subject型のListインスタンス
+     */
+    public List<Subject> findSubjects();
 
 }
