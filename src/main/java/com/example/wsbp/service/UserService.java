@@ -4,6 +4,7 @@ import com.example.wsbp.data.AuthUser;
 import com.example.wsbp.data.Lecture;
 import com.example.wsbp.data.Subject;
 import com.example.wsbp.repository.IAuthUserRepository;
+import com.example.wsbp.repository.ILecturePasswordRepository;
 import com.example.wsbp.repository.ILectureRepository;
 import com.example.wsbp.repository.ISubjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +18,14 @@ public class UserService implements IUserService {
     private IAuthUserRepository authUserRepos;
     private ISubjectRepository subjectRepos;
     private ILectureRepository lectureRepos;
+    private ILecturePasswordRepository lecturePasswordRepos;
 
     @Autowired
-    public UserService(IAuthUserRepository authUserRepos, ISubjectRepository subjectRepos, ILectureRepository lectureRepos) {
+    public UserService(IAuthUserRepository authUserRepos, ISubjectRepository subjectRepos, ILectureRepository lectureRepos, ILecturePasswordRepository lecturePasswordRepos) {
         this.authUserRepos = authUserRepos;
         this.subjectRepos = subjectRepos;
         this.lectureRepos = lectureRepos;
+        this.lecturePasswordRepos = lecturePasswordRepos;
     }
 
     @Override

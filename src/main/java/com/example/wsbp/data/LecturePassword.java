@@ -13,4 +13,7 @@ public class LecturePassword implements Serializable {
 
     public int getLectureID() {return LectureID;}
     public String getLecturePassword() {return LecturePassword;}
+
+    public void setLectureID(int lectureID) {this.LectureID = lectureID;}
+    public void setLecturePassword(String lecturePassword) {this.LecturePassword = lecturePassword;}
 }
