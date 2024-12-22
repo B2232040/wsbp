@@ -2,14 +2,21 @@ package com.example.wsbp.repository;
 
 
 import com.example.wsbp.data.Subject;
-
 import java.util.List;
 
 public interface ISubjectRepository {
+
     /**
-     * AuthUserテーブルのすべての情報を検索する
+     * Subjectテーブルのすべての情報を検索する
      *
-     * @return レコードの内容を {@link Subject} の {@link Subject} で返す
+     * @return テーブルのすべての情報
      */
     public List<Subject> find();
+
+    /**
+     *  SubjectテーブルのIDと一致するsubject_nameを検索
+     *
+     * @return IDと一致するsubject_name
+     */
+    public Subject findByID(int id);
 }
